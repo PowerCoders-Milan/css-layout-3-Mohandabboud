@@ -1,1 +1,90 @@
 /* USE CSS GRID AND FLEX HERE */
+
+.blue {
+    background-color: blueviolet;
+    grid-area: fdf;
+
+}
+.header {
+    background-color: aqua;
+    grid-area: header;
+
+}
+
+.feature1 {
+    background-color: burlywood;
+    grid-area: feature1;
+
+}
+
+.feature2 {
+    background-color: cornflowerblue;
+    grid-area: feature2;
+
+}
+
+.feature3 {
+    background-color: darksalmon;
+    grid-area: feature3;
+
+}
+
+.conten {
+    background-color: darkblue;
+    grid-area: conten;
+
+}
+
+.sign-up {
+    background-color: lightsteelblue;
+    grid-area: sign-up;
+}
+
+  @media (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-columns: 100%; 
+        min-height: 100vh;
+        margin: 0px;
+        grid-template-areas: 'header'
+        'header'
+        'conten'
+        'sign-up'
+        'feature1';    
+    }
+}
+
+  @media (min-width: 600px) {
+ .container {
+    display: grid; 
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 50% 50%;
+    min-height: 100vh;
+    margin: 0px;
+    grid-template-areas: 'header header'
+    'header header'
+    'conten conten'
+    'sign-up feature1'
+    'feature2 feature3';
+    
+    
+    
+}
+  }
+
+  @media (min-width: 1000px) {
+    .container {
+       display: grid; 
+       grid-template-rows: 20% 20% 20% 20% 20%;
+       grid-template-columns: 1fr 1fr 1fr;
+       min-height: 100vh;
+       margin: 0px;
+       grid-template-areas: 
+                            "header header header"
+                            "header header header"
+                            "feature1 feature2 feature3"
+                            "sign-up sign-up sign-up"
+                            "conten conten conten";
+   }
+     }
